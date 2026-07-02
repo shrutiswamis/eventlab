@@ -228,6 +228,36 @@ def run_live_refresh() -> subprocess.CompletedProcess[str]:
     )
 
 
+def run_seed_bootstrap() -> subprocess.CompletedProcess[str]:
+    env = os.environ.copy()
+    env["PYTHONPATH"] = "src"
+    return subprocess.run(
+        [sys.executable, "-m", "eventlab.scripts.run_pipeline"],
+        cwd=PROCESSED_DATA_DIR.parents[1],
+        env=env,
+        text=True,
+        capture_output=True,
+        timeout=60,
+        check=False,
+    )
+
+
+def ensure_dashboard_data() -> bool:
+    if DEFAULT_SQLITE_PATH.exists():
+        return True
+
+    with st.spinner("Preparing EventLab demo data..."):
+        result = run_seed_bootstrap()
+
+    if result.returncode == 0 and DEFAULT_SQLITE_PATH.exists():
+        st.toast("EventLab demo data generated.")
+        return True
+
+    st.error("EventLab could not generate the processed dashboard data.")
+    st.code(result.stderr or result.stdout or "No pipeline output captured.")
+    return False
+
+
 def format_pct(value: float) -> str:
     return f"{value:.1%}"
 
@@ -546,8 +576,7 @@ def research_view() -> None:
 def main() -> None:
     inject_css()
 
-    if not DEFAULT_SQLITE_PATH.exists():
-        st.error("Run `PYTHONPATH=src python3 -m eventlab.scripts.run_pipeline` before opening the dashboard.")
+    if not ensure_dashboard_data():
         return
 
     predictions = load_predictions()
