@@ -1,0 +1,13 @@
+# Core pipeline intentionally uses only the Python standard library.
+# Install these extras for the full research/dashboard experience.
+-e .
+streamlit>=1.36
+pandas>=2.2
+altair>=5.0
+numpy>=1.26
+pymc>=5.15
+arviz>=0.18
+scikit-learn>=1.5
+psycopg[binary]>=3.2
+pytest>=8.0
+ruff>=0.5

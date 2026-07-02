@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eventlab"
+version = "0.1.0"
+description = "Bayesian prediction-market pricing engine for Fed rate-cut contracts."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Shruti Swami" }]
+dependencies = []
+
+[project.optional-dependencies]
+dashboard = ["streamlit>=1.36", "pandas>=2.2", "altair>=5.0"]
+research = ["numpy>=1.26", "pandas>=2.2", "pymc>=5.15", "arviz>=0.18", "scikit-learn>=1.5"]
+postgres = ["psycopg[binary]>=3.2"]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+
+[project.scripts]
+eventlab-run = "eventlab.scripts.run_pipeline:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+

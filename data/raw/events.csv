@@ -1,0 +1,5 @@
+event_id,market_id,event_name,event_date,outcome
+FED-JUL26-CUT,KALSHI-FED-JUL26-CUT,July 2026 FOMC rate cut,2026-07-29,
+FED-SEP26-CUT,KALSHI-FED-SEP26-CUT,September 2026 FOMC rate cut,2026-09-16,
+FED-DEC26-CUT,POLY-FED-DEC26-CUT,December 2026 FOMC rate cut,2026-12-16,
+

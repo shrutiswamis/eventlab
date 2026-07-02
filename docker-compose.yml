@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: eventlab
+      POSTGRES_USER: eventlab
+      POSTGRES_PASSWORD: eventlab
+    ports:
+      - "5432:5432"
+    volumes:
+      - eventlab_pgdata:/var/lib/postgresql/data
+      - ./src/eventlab/db/schema.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U eventlab -d eventlab"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  eventlab_pgdata:
+

@@ -1,0 +1,4 @@
+source,status,rows,detail,fetched_at
+polymarket_gamma,empty,0,Scanned 100 active markets; matched 0 Fed/rate-related titles.,2026-07-02T16:54:27+00:00
+bls_public_api,live,2,BLS public API: unemployment and CPI; bundled Fed funds proxy.,2026-07-02T16:54:27+00:00
+eventlab_seed_data,fallback,3,No matching public Fed-rate markets were found; using bundled contracts.,2026-07-02T16:54:27+00:00

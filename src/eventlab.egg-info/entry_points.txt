@@ -1,0 +1,2 @@
+[console_scripts]
+eventlab-run = eventlab.scripts.run_pipeline:main

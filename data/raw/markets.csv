@@ -1,0 +1,5 @@
+market_id,venue,title,category,expiration_date,resolution_date
+KALSHI-FED-JUL26-CUT,Kalshi,Will the Fed cut rates at the July 2026 FOMC meeting?,fed_rates,2026-07-29,2026-07-29
+KALSHI-FED-SEP26-CUT,Kalshi,Will the Fed cut rates at the September 2026 FOMC meeting?,fed_rates,2026-09-16,2026-09-16
+POLY-FED-DEC26-CUT,Polymarket,Will the Fed cut rates by the December 2026 FOMC meeting?,fed_rates,2026-12-16,2026-12-16
+

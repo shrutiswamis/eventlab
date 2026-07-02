@@ -1,0 +1,4 @@
+event_id,timestamp,cpi_surprise,unemployment_rate,unemployment_change,fed_funds_implied_prob,fomc_tone_score,days_to_event
+FED-DEC26-CUT,2026-07-02T16:54:27+00:00,0.2131,4.2,-0.1,0.4424,0.0,167
+FED-JUL26-CUT,2026-07-02T16:54:27+00:00,0.2131,4.2,-0.1,0.4424,0.0,27
+FED-SEP26-CUT,2026-07-02T16:54:27+00:00,0.2131,4.2,-0.1,0.4424,0.0,76

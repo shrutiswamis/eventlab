@@ -1,0 +1,2 @@
+n_events,n_trades,hit_rate,average_edge,brier_score,log_loss,hypothetical_pnl
+12,2,1.0,0.0683,0.1063,0.3599,0.59
