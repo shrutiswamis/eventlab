@@ -15,7 +15,7 @@ Edge: -7.9%
 Conclusion: YES appears expensive unless new information explains the gap.
 ```
 
-## Why This Is Resume Ready
+## Project Highlights
 
 - Real research-platform layout with separate ingestion, storage, feature engineering, modeling, backtesting, and dashboard layers.
 - Hybrid data mode: public BLS macro ingestion plus public prediction-market ingestion attempts, with deterministic fallback data for reproducible demos.
