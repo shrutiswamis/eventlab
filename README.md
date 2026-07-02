@@ -152,7 +152,3 @@ eventlab/
 - [Runbook](docs/RUNBOOK.md)
 - [Code Walkthrough](docs/CODE_WALKTHROUGH.md)
 - [Free Deployment Guide](docs/DEPLOYMENT.md)
-
-## Interview Framing
-
-"I built EventLab, a Python/PostgreSQL research platform that ingests prediction-market prices and macro data, validates the data, applies Bayesian probability modeling to estimate fair values, and backtests market-model discrepancies for trading signal quality."
