@@ -128,13 +128,6 @@ This is intentionally easy to defend in interviews. The next research step is re
 - Add automated scheduled refreshes through GitHub Actions or a hosted job runner.
 - Deploy the dashboard on Streamlit Community Cloud with a public GitHub repository and documented refresh cadence.
 
-## Resume Bullets
-
-- Built EventLab, a hybrid live Bayesian prediction-market pricing platform in Python that estimates fair probabilities for Fed-rate contracts and compares model-implied values against market prices.
-- Designed ETL-style ingestion for public macro data and prediction-market sources, normalized market and macroeconomic data into relational tables, and generated posterior probability estimates with credible intervals.
-- Implemented backtesting and calibration tooling using Brier score, log loss, calibration curves, hit rate, average edge, and hypothetical PnL after fees.
-- Developed a Streamlit dashboard to surface contract-level mispricings, source freshness, expected value, historical accuracy, and model methodology.
-
 ## Project Layout
 
 ```text
